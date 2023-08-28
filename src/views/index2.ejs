@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý ký túc Xá</title>
+    <link rel="stylesheet" href="/css/cssreset.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="container">
+    <div class="wrap">
+            <img src="/image/69327390_1325417324292118_749478274257649664_n.jpg" alt="test" id="background">
+        <form class="login" action="/trang-chu/quan-ly/<%=MQL%>" method="post">
+            <div class="login_image">
+                <img src="/image/images.png" alt="logo Đại Học Huế">
+            </div>
+            <br>
+            <h3>DÀNH CHO QUẢN LÝ</h3>
+            <div class="login_dn">
+                <input type="text" placeholder="Mã quản lý" id="Maql" name="Maql">
+                <span class="focus_frame"></span>
+            </div>
+            
+            <div class="login_dn">
+                <input type="password" placeholder="Mật khẩu" id="mk" name="password">    
+                <span class="focus_frame"></span> 
+            </div>
+            <h4><%= note%></h4>
+            <h4><%= note2%></h4>
+            <div class="login_button">
+                <button class="button-dn" type="submit">ĐĂNG NHẬP</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

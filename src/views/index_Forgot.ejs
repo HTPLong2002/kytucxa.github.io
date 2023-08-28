@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTX | Quên mật khẩu</title>
+    <link rel="stylesheet" href="/css/cssreset.css">
+    <link rel="stylesheet" href="/css/Forgot_mk.css">
+</head>
+<body>
+    <div class="container">
+    <div class="wrap">
+            <img src="/image/69327390_1325417324292118_749478274257649664_n.jpg" alt="test" id="background">
+        <form action="/quen-mat-khau" method="post" class="Forgot">
+            <div class="Forgot_image">
+                <img src="/image/images.png" alt="logo Đại Học Huế">
+            </div>
+            <h3>QUÊN MẬT KHẨU</h3>
+            <div class="Forgot_mk">
+                <input type="text" id="Email" placeholder=" " name="Email">
+                <label for="Email" class="label">Email</label>
+            </div>
+            <h4><%= note%></h4>
+            <%if(num==true){%>
+                <p>Đã gửi mail thành công</p>
+            <%}%>
+            <%if(num==false){%>
+                <p style="color: red;">Email không tồn tại</p>
+            <%}%>
+            <div class="back_send">
+                <a class="back" href="/">Quay lại</a>
+                <button class="button-forgot" type="submit">THỰC HIỆN</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

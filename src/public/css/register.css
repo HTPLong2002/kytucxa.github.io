@@ -1,0 +1,146 @@
+body, html{
+    height: 100%;
+    font-family: "Segoe UI";
+}
+div.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+div.wrap{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+img#background{
+    width: 100%;
+    overflow: hidden;
+}
+form.Register{
+    width: 560px;
+    max-height: 100%;
+    overflow: auto;
+    display: block;
+    padding: 25px 25px 0px 45px;
+}
+div.Register_image img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+}
+h4{
+    color: red;
+    font-weight: normal;
+}
+h3{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+div.Scroll_Bar{
+    display: block;
+    height: 55%;
+    overflow: hidden;
+}
+div.Scroll_Bar:hover{
+    overflow: auto;
+}
+div.Register_dk{
+    position: relative;
+    height: 50px;
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    border-color: #fff;
+}
+div.Register_dk input{
+    display: block;
+    width: 320px;
+    border: 1px solid rgb(195, 47, 47);
+    border-radius: 12px;
+    padding-left: 20px;
+    outline: none;
+}
+label.label{
+    position: absolute;
+    display: block;
+    left: 20px;
+    bottom: 14px;
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+input:not(:placeholder-shown) + label.label,
+input:focus + label.label {
+    bottom: 39px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* display: block; */
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+
+/* select#ngaysinh, select#thangsinh{
+    width: 60px;
+    border: 1px solid rgb(195, 47, 47);
+    padding-left: 15px;
+} */
+div.icon{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+span#note{
+    display: block;
+    margin-bottom: 15px;
+}
+div.note_mk{
+    display: flex;
+    height: 20px;
+}
+i.fa-solid.fa-circle{
+    display: block;
+    padding-top: 13px;
+    margin-right: 10px;
+}
+div.bignote_mk{
+    display: block;
+    height: 40px; 
+}
+div.back_register{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+a.back{
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+    margin-right: auto;
+    border-radius: 12px;
+    background-color: #0099FF;
+    color: #fff;
+}
+a.back:hover{
+    background-color: #088ae0;
+}
+button.button-dk{
+    display: block;
+    height: 100%;
+    border-radius: 12px;
+    border: 0px;
+    background-color: rgba(255, 0, 0, 0.795);
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    left: 59%;
+}
+button.button-dk:hover{
+    background-color: #f26f33;
+}

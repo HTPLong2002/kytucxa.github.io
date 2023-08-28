@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTX | Đăng ký</title>
+    <link rel="stylesheet" href="/css/cssreset.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+    <div class="wrap">
+            <img src="image/69327390_1325417324292118_749478274257649664_n.jpg" alt="test" id="background">
+        <form class="Register" action="/creater-data" method="post" >
+            <div class="Register_image">
+                <img src="image/images.png" alt="logo Đại Học Huế">
+            </div>
+            <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+        <div class="Scroll_Bar">
+            <div class="Register_dk">
+                <input type="text" id="Masv" placeholder=" " name="Masv" maxlength="10">
+                <label for="Masv" class="label">Mã sinh viên</label>
+                <span class="focus_frame"></span>
+            </div>
+            
+            <div class="Register_dk">
+                <input type="text" id="Hoten" placeholder=" " name="Hoten">
+                <label for="Hoten" class="label">Họ và tên</label>
+                <span class="focus_frame"></span>          
+            </div>
+            <div class="Register_dk">
+                <input type="date" id="Birthday" placeholder=" " name="Birthday" maxlength="8">
+                <label for="Birthday" class="label">Ngày sinh</label>
+                <span class="focus_frame"></span>  
+            </div>
+            <div class="Register_dk">
+                <input type="text" id="CCCD" placeholder=" " name="CCCD" maxlength="12">
+                <label for="CCCD" class="label">Căn cước công dân</label>         
+            </div>
+            <div class="Register_dk">
+                <input type="email" id="mail" placeholder=" " name="email">
+                <label for="mail" class="label">Email</label>
+            </div>
+            <div class="Register_dk">
+                <input type="text" id="SDT" placeholder=" " name="SDT" maxlength="10">
+                <label for="SDT" class="label">Số điện thoại</label>
+            </div>
+            <div class="Register_dk">
+                <input type="password" id="mk"placeholder=" " name="password">
+                <label for="mk" class="label">Mật khẩu</label>
+            </div>
+            <div class="bignote_mk">
+            <div class="note_mk">
+                <i class="fa-solid fa-circle fa-2xs"></i>
+                <span id="note">Mật khẩu phải có độ dài tối thiểu 6 ký tự</span>
+            </div>
+            <div class="note_mk">
+                <i class="fa-solid fa-circle fa-2xs"></i>
+                <span id="note">Nên tắt chế độ gõ tiếng Việt khi nhập mật khẩu</span>
+            </div>
+            </div>
+            <br>
+            <div class="Register_dk">
+                <input type="password" id="xacnhanmk" placeholder=" " value="" name="xacnhanmk">
+                <label for="xacnhanmk" class="label">Xác nhận lại mật khẩu</label>
+            </div>
+        </div>
+        <div class="back_register">
+            <a class="back" href="/">Quay lại</a>
+            <button id="xndk" class="button-dk" type="submit">Xác nhận đăng ký</button>
+        </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

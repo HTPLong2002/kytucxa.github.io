@@ -1,0 +1,82 @@
+<!-- <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.JS Basic</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/upload" class="active">Upload file</a>
+    </div>
+
+    <div class="upload-file-container">
+        <form>
+            <div class="id1">
+                <label for="gender" class="label-1">Giới tính</label> 
+                <div class="form-gioitinh">        
+                <label for="Male" class="label-2">            
+                    <input type="radio" id="Male" name="gioitinh" value="Nam">Nam<br>
+                </label> 
+                <label for="Female">                          
+                    <input type="radio" id="Female" name="gioitinh" value="Nữ">Nữ<br>
+                </label> 
+                </div>
+            </div>
+            <div>
+                <label>Avatar:</label>
+                <input type="file" name="profile_pic" id="profile" multiple/>
+            </div>
+            <div>
+                <label>Avatar2:</label>
+                <input type="file" name="profile_pic2" />
+            </div>
+            <div class="id1">
+                <input type="text" class="text-form"  id="SDT" placeholder=" " name="SDT" maxlength="11" value="">
+                <label for="SDT" class="label">Số điện thoại</label>
+            </div>
+            <div>
+                <button class="btn-save" type="submit">Save files</button>
+            </div>
+        </form>
+    </div>
+<script>
+    const form = document.querySelector('form');
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            var SDT = document.getElementById("SDT").value;
+            var file = document.getElementById("profile").value;
+            var arr_gt = document.getElementsByName("gioitinh");
+            let dem = 0;
+            for(let i = 0; i<arr_gt.length; i++){
+                if(arr_gt[i].checked == true){
+                    dem++;
+                }
+            }
+            if(dem==0){
+                return alert("yêu cầu chọn giới tính");
+            }
+            if(file<2){
+                alert("ảnh CCCD phải tải lên đầy đủ 2 file");
+                return false;
+            }
+            if(SDT==""){
+                alert("Số điện thoại không được bỏ trống");
+                return false;
+            }
+            const fd = new FormData(form);
+            const urlEncoded = new URLSearchParams(fd).toString();
+            fetch('/upload-profile-pic',{
+                method: "POST",
+                body: fd,
+            }) 
+        })
+</script>
+</body>
+
+</html> -->

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web quản lý KTX</title>
+    <link rel="stylesheet" href="/css/cssreset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/dkphong_duyet.css">
+</head>
+<body>
+    <header class="head_web">
+        <div class="logo">
+            <a href="/trang-chu/user/<%= Masv%>" class="home">
+            <i class="fa-solid fa-house"></i>
+            <div class="text">
+                <h3 id="text1">TRANG CHỦ</h3>
+                <h3 id="text2">CỦA SINH VIÊN</h3>
+            </div>
+            </a>
+        </div>
+            <ul class="menu">
+                <li class="dropdown_show">
+                    <a class="item_thongbao it" href="#" title="Thông báo">
+                    <i class="fa-solid fa-bell"></i>
+                    </a>
+                    <ul class="box_tb">
+                        <li>
+                            <a href="/hocweb/qlktx_SV.html">
+                                <h2>Thông báo</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown_show">
+                    <a class="item_mail it" href="#" title="mail">
+                        <i class="fa-sharp fa-solid fa-envelope"></i>
+                    </a>
+                    <ul class="box_tb">
+                        <li>
+                            <a href="/hocweb/qlktx_SV.html">
+                                <h2>Mail</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main_avt">
+                    <div class="block_avt">
+                        <span><%=HoTen%></span>
+                    <a class="user_avt" href="#" title="Thông báo">
+                        <img src="/image/avt.jpg" alt="avt">
+                        <div class="icon_avt">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>                     
+                    </a>
+                    <ul class="information">
+                        <li class="ttsv"><a id="ttsv" href="/trang-chu/user/<%=Masv%>/thong-tin-sinh-vien">Thông tin sinh viên</a></li>
+                        <li class="ttsv"><a href="/">Đăng xuất</a></li>
+                    </ul>
+                    </div>
+                </li>
+            </ul>
+    </header>
+    <aside class="main_sidebar">
+        <ul class="menu_sidebar">
+            <li class="menu1">
+                <a class="menu1_item ip1" href="#">
+                    <i class="app-menu__icon fa fa-edit"></i>
+                    <span>Biểu mẫu</span>
+                    <i class="treeview-indicator fa fa-angle-right"></i>    
+                </a>
+                
+                <ul class="menu_sidebar2">
+                    <li><a href="/trang-chu/user/<%= Masv%>/Thong-tin-dkphong">Đăng ký ở KTX</a></li>
+                    <li><a href="/trang-chu/user/<%=Masv%>/duyet-don-swaproom">Đăng ký chuyển phòng KTX</a></li>
+                    <li><a href="">Đăng ký trả phòng KTX</a></li>
+                    <li><a href="">Đăng ký sửa chữa CSVC</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <main class="main_web">
+        <div class="head_title">
+            <div>
+                <h1>
+                    <i class="fa fa-edit"></i>
+                    Đăng ký phòng
+                </h1>
+            </div>
+        </div>
+        <div class="block_form">
+                <div div class="title">
+                    <h3 class="title-form">Thông tin phòng ở ký túc xá</h3>
+                    <div class="title-body"> 
+                        <div class="title-footer">
+                            <div class="button-dangky">
+                                <a href="/trang-chu/user/<%= Masv%>/dang-ky-phong" class="out">
+                                    Đăng ký ở ký túc xá
+                                </a>
+                            </div>
+                            <div class="button-phong">
+                                <a href="/trang-chu/user/<%=Masv%>/duyet-don-swaproom" class="out">
+                                    Thông tin đk chuyển phòng
+                                </a>
+                            </div>    
+                            <div class="button-phong">
+                                    <a href="/trang-chu/user/<%= Masv%>/Thong-tin-dkphong" class="out">
+                                    Thông tin đăng ký phòng
+                                    </a>
+                            </div>
+                    </div>                 
+                </div>
+                <div class="table-container">               
+                    <table class="table-all hoverable">
+                      <thead>
+                        <tr class="light-grey">
+                          <th>Mã ký túc xá</th>
+                          <th>Mã dãy</th>
+                          <th>Mã phòng</th>
+                          <th>Loại phòng</th>
+                          <th>Số lượng còn lại</th>
+                        </tr>
+                      </thead>
+                      <% for(let i=0; i<data2.length; i++){ %>
+                        <%if(data2[i].soluongconlai!=6){%>
+                            <tr>
+                                <td><%= data2[i].Maktx%></td>
+                                <td><%= data2[i].Maday%></td>
+                                <td><%= data2[i].Maphong%></td>
+                                <td><%= data2[i].Loaiphong%></td>
+                                <td><%=data2[i].soluongconlai%>/6</td>
+                            </tr> 
+                        <%}else{%>
+                            <tr style="background-color: rgba(251, 76, 32, 0.944);">
+                                <td><%= data2[i].Maktx%></td>
+                                <td><%= data2[i].Maday%></td>
+                                <td><%= data2[i].Maphong%></td>
+                                <td><%= data2[i].Loaiphong%></td>
+                                <td><%=data2[i].soluongconlai%>/6</td>
+                            </tr>
+                        <%}%>
+                        
+                      
+                      <%}%>
+                    </table>
+                  </div>
+        </div>
+    </main>
+    <footer class="footer_web">
+        <h5>Web phát triển bởi
+            <a href="https://www.facebook.com/profile.php?id=100009414029987">Huỳnh Tấn Phi Long</a>
+        </h5>
+    </footer>
+    <script>
+        let arrow2 = document.querySelectorAll(".user_avt");
+        for (var i = 0; i < arrow2.length; i++) {
+          arrow2[i].addEventListener("click", (e)=>{
+         let arrowParent2 = e.target.parentElement.parentElement;//selecting main parent of arrow
+         arrowParent2.classList.toggle("showMenu");
+          });
+        }
+        let arrow = document.querySelectorAll(".menu1_item");
+        for (var i = 0; i < arrow.length; i++) {
+          arrow[i].addEventListener("click", (e)=>{
+         let arrowParent = e.target.parentElement;//selecting main parent of arrow
+         arrowParent.classList.toggle("showMenu");
+          });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+    </script>
+</body>
+</html>

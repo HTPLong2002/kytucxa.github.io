@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web quản lý KTX</title>
+    <link rel="stylesheet" href="/css/cssreset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/swapphong.css">
+</head>
+<body>
+    <header class="head_web">
+        <div class="logo">
+            <a href="/trang-chu/user/<%= Masv%>" class="home">
+            <i class="fa-solid fa-house"></i>
+            <div class="text">
+                <h3 id="text1">TRANG CHỦ</h3>
+                <h3 id="text2">CỦA SINH VIÊN</h3>
+            </div>
+            </a>
+        </div>
+            <ul class="menu">
+                <li class="dropdown_show">
+                    <a class="item_thongbao it" href="#" title="Thông báo">
+                    <i class="fa-solid fa-bell"></i>
+                    </a>
+                    <ul class="box_tb">
+                        <li>
+                            <a href="/hocweb/qlktx_SV.html">
+                                <h2>Thông báo</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown_show">
+                    <a class="item_mail it" href="#" title="mail">
+                        <i class="fa-sharp fa-solid fa-envelope"></i>
+                    </a>
+                    <ul class="box_tb">
+                        <li>
+                            <a href="/hocweb/qlktx_SV.html">
+                                <h2>Mail</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main_avt">
+                    <div class="block_avt">
+                        <span><%=HoTen%></span>
+                    <a class="user_avt" href="#" title="Thông báo">
+                        <img src="/image/avt.jpg" alt="avt">
+                        <div class="icon_avt">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>                     
+                    </a>
+                    <ul class="information">
+                        <li class="ttsv"><a id="ttsv" href="/trang-chu/user/<%=Masv%>/thong-tin-sinh-vien">Thông tin sinh viên</a></li>
+                        <li class="ttsv"><a href="/">Đăng xuất</a></li>
+                    </ul>
+                    </div>
+                </li>
+            </ul>
+    </header>
+    <aside class="main_sidebar">
+        <ul class="menu_sidebar">
+            <li class="menu1">
+                <a class="menu1_item ip1" href="#">
+                    <i class="app-menu__icon fa fa-edit"></i>
+                    <span>Biểu mẫu</span>
+                    <i class="treeview-indicator fa fa-angle-right"></i>    
+                </a>
+                
+                <ul class="menu_sidebar2">
+                    <li><a href="/trang-chu/user/<%= Masv%>/Thong-tin-dkphong">Đăng ký ở KTX</a></li>
+                    <li><a href="/trang-chu/user/<%=Masv%>/duyet-don-swaproom">Đăng ký chuyển phòng KTX</a></li>
+                    <li><a href="">Đăng ký trả phòng KTX</a></li>
+                    <li><a href="">Đăng ký sửa chữa CSVC</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <main class="main_web">
+        <div class="head_title">
+            <div>
+                <h1>
+                    <i class="fa fa-edit"></i>
+                    Đăng ký chuyển phòng
+                </h1>
+                <p>Đơn đăng ký dành cho sinh viên muốn chuyển phòng</p>
+            </div>
+        </div>
+        <div class="block_form">
+                <div div class="title">
+                    <h3 class="title-form">Biểu mẫu đăng ký chuyển phòng</h3>
+                    <div class="title-body">
+                        <form>
+                            <div class="form-dkp">
+                                <div class="block-sv">
+                                <div class="id1">
+                                    <label for="Maphong" class="label-1">Mã phòng đang ở hiện tại</label>
+                                    <br>
+                                    <input type="text" class="text-form form-disable" id="Maphong" placeholder=" " value="<%=Maphong%>" name="Maphong" readonly>
+                                </div>
+                                <div class="id1">
+                                    <label for="Maphong2" class="label-1" >Mã phòng muốn chuyển tới</label>
+                                    <br>
+                                    <select name="Maphong2" id="Maphong2">
+                                        <option value=""></option>
+                                        <option value="A1001">A1001</option>
+                                        <option value="A1002">A1002</option>
+                                        <option value="A2001">A2001</option>
+                                        <option value="A2002">A2002</option>
+                                        <option value="B1001">B1001</option>
+                                        <option value="B1002">B1002</option>
+                                    </select>
+                                </div>
+                                <div class="id1 note">
+                                    <label for="note" class="label-1">Lý do chuyển</label><br>
+                                    <textarea name="note" id="note" cols="50" rows="10" class="lydo"></textarea>
+                                </div>  
+                                </div>
+                                <div class="title-footer">
+                                    <div class="button-dk">
+                                        <button type="submit" class="register">
+                                            <i class="fa fa-fw fa-lg fa-check-circle"></i>
+                                            Đăng ký
+                                        </button>
+                                    </div>
+                                    <div class="button-out">
+                                        <a href="/trang-chu/user/<%= Masv%>/Thong-tin-dkphong" class="out">
+                                            <i class="fa fa-fw fa-lg fa-times-circle"></i>
+                                            Hủy
+                                        </a>
+                                    </div>  
+                                </div> 
+                        </form>
+                    </div>                   
+                </div>
+        </div>
+    </main>
+    <footer class="footer_web">
+        <h5>Web phát triển bởi
+            <a href="https://www.facebook.com/profile.php?id=100009414029987">Huỳnh Tấn Phi Long</a>
+        </h5>
+    </footer>
+    <script>
+        let arrow2 = document.querySelectorAll(".user_avt");
+        for (var i = 0; i < arrow2.length; i++) {
+          arrow2[i].addEventListener("click", (e)=>{
+         let arrowParent2 = e.target.parentElement.parentElement;//selecting main parent of arrow
+         arrowParent2.classList.toggle("showMenu");
+          });
+        }
+        let arrow = document.querySelectorAll(".menu1_item");
+        for (var i = 0; i < arrow.length; i++) {
+          arrow[i].addEventListener("click", (e)=>{
+         let arrowParent = e.target.parentElement;//selecting main parent of arrow
+         arrowParent.classList.toggle("showMenu");
+          });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            // let Masv = document.getElementById("Masv").value;
+            let Maphong2 = document.getElementById("Maphong2").value;
+            if(Maphong2==""){
+                alert("Mã phòng mới không được để trống!");
+                return false;
+            }
+            const fd = new FormData(form);
+            const urlEncoded = new URLSearchParams(fd).toString();
+            fetch('/trang-chu/user/:Masv/dang-ky-chuyen-phong',{
+                method: "POST",
+                body:fd,
+               
+            })
+            alert("Gửi đơn thành công")
+            return window.location.href = "duyet-don-swaproom";
+        })
+        
+    </script>
+</body>
+</html>

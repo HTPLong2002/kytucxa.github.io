@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web quản lý KTX</title>
+    <link rel="stylesheet" href="/css/cssreset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/avatar.css">
+</head>
+<body>
+    <header class="head_web">
+        <div class="logo">
+            <a href="/trang-chu/user/<%= Masv%>" class="home">
+            <i class="fa-solid fa-house"></i>
+            <div class="text">
+                <h3 id="text1">TRANG CHỦ</h3>
+                <h3 id="text2">CỦA SINH VIÊN</h3>
+            </div>
+            </a>
+        </div>
+            <ul class="menu">
+                <li class="dropdown_show">
+                    <a class="item_thongbao it" href="#" title="Thông báo">
+                    <i class="fa-solid fa-bell"></i>
+                    </a>
+                    <ul class="box_tb">
+                        <li>
+                            <a href="/hocweb/qlktx_SV.html">
+                                <h2>Thông báo</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown_show">
+                    <a class="item_mail it" href="#" title="mail">
+                        <i class="fa-sharp fa-solid fa-envelope"></i>
+                    </a>
+                    <ul class="box_tb">
+                        <li>
+                            <a href="/hocweb/qlktx_SV.html">
+                                <h2>Mail</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main_avt">
+                    <div class="block_avt">
+                        <span><%=HoTen%></span>
+                    <a class="user_avt" href="#" title="Thông báo">
+                        <img src="/image/avt.jpg" alt="avt">
+                        <div class="icon_avt">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>                     
+                    </a>
+                    <ul class="information">
+                        <li class="ttsv"><a id="ttsv" href="/trang-chu/user/<%=Masv%>/thong-tin-sinh-vien">Thông tin sinh viên</a></li>
+                        <li class="ttsv"><a href="/">Đăng xuất</a></li>
+                    </ul>
+                    </div>
+                </li>
+            </ul>
+    </header>
+    <aside class="main_sidebar">
+        <ul class="menu_sidebar">
+            <li class="menu1">
+                <a class="menu1_item ip1" href="#">
+                    <i class="app-menu__icon fa fa-edit"></i>
+                    <span>Biểu mẫu</span>
+                    <i class="treeview-indicator fa fa-angle-right"></i>    
+                </a>
+                
+                <ul class="menu_sidebar2">
+                    <li><a href="/trang-chu/user/<%= Masv%>/Thong-tin-dkphong">Đăng ký ở KTX</a></li>
+                    <li><a href="/trang-chu/user/<%=Masv%>/duyet-don-swaproom">Đăng ký chuyển phòng KTX</a></li>
+                    <li><a href="">Đăng ký trả phòng KTX</a></li>
+                    <li><a href="">Đăng ký sửa chữa CSVC</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <main class="main_web">
+        <div class="block_form">
+                <div div class="title">
+                    <h3 class="title-form">Thông tin sinh viên</h3>
+                    <div class="title-body">
+                            <div class="block-sv">
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="MaSV" placeholder=" " value="<%=Masv%>" name="MaSV" readonly>
+                                    <label for="MaSV" class="label">Mã số sinh viên</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="Hoten_sv" placeholder=" " value="<%=HoTen%>" name="Hoten" readonly>
+                                    <label for="Hoten" class="label">Họ và tên</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="ngaysinh" placeholder=" " value="<%=Ngaysinh%>" name="ngaysinh" readonly>
+                                    <label for="ngaysinh" class="label">Ngày sinh</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="" placeholder=" " value="<%=GioiTinh%>" name="gioitinh" readonly>
+                                    <label for="ngaysinh" class="label">Giới tính</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="SDT" placeholder=" " value="<%=SDT%>" name="SDT" maxlength="11" readonly>
+                                    <label for="SDT" class="label">Số điện thoại</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="email" class="text-form form-disable"  id="Email-TDH" placeholder=" " value="<%=Email_daihoc%>" name="Email_TDH" readonly>
+                                    <label for="Email-TDH" class="label">Email trường đại học</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="email" class="text-form form-disable"  id="Email-cn" placeholder=" " value="<%=Email%>" name="Email_cn" readonly>
+                                    <label for="Email-cn" class="label">Email cá nhân</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="Truong" placeholder=" " value="<%=Truong%>" name="Truong" readonly>
+                                    <label for="Truong" class="label">Trường đại học</label>
+                                </div>
+
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="key" placeholder=" " value="<%=Khoa%>" name="key" readonly>
+                                    <label for="key" class="label">Khóa</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="nganh" placeholder=" " value="<%=Nganh%>" name="Nganh" readonly>
+                                    <label for="nganh" class="label">Ngành</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="CCCD" placeholder=" " value="<%=CCCD%>" name="CCCD" readonly>
+                                    <label for="CCCD" class="label">Căn cước công dân</label>
+                                </div>
+                                <div class="id1">
+                                    <div class="container-image">
+                                        <div class="button-dangky">
+                                            <a href="/image-CCCD/<%=Masv%>" class="out">
+                                                ảnh CCCD
+                                            </a>
+                                        </div>  
+                                    </div>
+                                    </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="dantoc" placeholder=" " value="<%=Dantoc%>" name="dantoc" readonly>
+                                    <label for="dantoc" class="label">Dân tộc</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="diachi" placeholder=" " value="<%=address%>" name="diachi" readonly>
+                                    <label for="diachi" class="label">Địa chỉ nhà</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="doituong" placeholder=" " value="<%=DTUT%>" name="doituong" readonly>
+                                    <label for="diachi" class="label">Đối tượng ưu tiên</label>
+                                </div>                
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="diachi" placeholder=" " value="<%=Maphong%>" name="Maphong" readonly>
+                                    <label for="diachi" class="label">Phòng hiện tại đang ở</label>
+                                </div>  
+                            </div>
+                            <hr>
+                    <h3 class="title-form">Thông tin người thân sinh viên</h3>
+                    <div class="block-sv">
+                        <div class="id1">
+                            <input type="text" class="text-form form-disable"  id="Hoten_ntsv" placeholder=" " value="<%=Hoten_ntsv%>" name="Hoten_ntsv" readonly>
+                            <label for="Hoten_ntsv" class="label">Họ và tên</label>
+                        </div>
+                        <div class="id1">
+                            <input type="text" class="text-form form-disable"  id="Quanhe" placeholder=" " value="<%=Quanhe%>" name="Quanhe" readonly>
+                            <label for="Hoten_ntsv" class="label">Quan hệ</label>
+                        </div>
+                        <div class="id1">
+                            <input type="text" class="text-form form-disable"  id="sodienthoai" placeholder=" " value="<%=SDT_phuhuynh%>" name="sodienthoai" readonly>
+                            <label for="sodienthoai" class="label">Số điện thoại</label>
+                        </div>
+                        <div class="id1">
+                            <input type="text" class="text-form form-disable"  id="dctt" placeholder=" " value="<%=DCTT%>" name="dctt" readonly>
+                            <label for="dctt" class="label">Địa chỉ thường trú</label>
+                        </div> 
+                    </div> 
+
+                </div>
+        </div>
+    </main>
+    <footer class="footer_web">
+        <h5>Web phát triển bởi
+            <a href="https://www.facebook.com/profile.php?id=100009414029987">Huỳnh Tấn Phi Long</a>
+        </h5>
+    </footer>
+    <script>
+        let arrow2 = document.querySelectorAll(".user_avt");
+        for (var i = 0; i < arrow2.length; i++) {
+          arrow2[i].addEventListener("click", (e)=>{
+         let arrowParent2 = e.target.parentElement.parentElement;//selecting main parent of arrow
+         arrowParent2.classList.toggle("showMenu");
+          });
+        }
+        let arrow = document.querySelectorAll(".menu1_item");
+        for (var i = 0; i < arrow.length; i++) {
+          arrow[i].addEventListener("click", (e)=>{
+         let arrowParent = e.target.parentElement;//selecting main parent of arrow
+         arrowParent.classList.toggle("showMenu");
+          });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+    </script>
+</body>
+</html>

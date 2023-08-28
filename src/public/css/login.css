@@ -1,0 +1,123 @@
+body, html{
+    height: 100%;
+    font-family: "Segoe UI";
+}
+h4{
+    display: block;
+    text-align: center;
+    color: red;
+    font-weight: normal;
+}
+div.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+div.wrap{
+    /* position: relative; */
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+img#background{
+    width: 100%;
+    overflow: hidden;
+}
+form.login{
+    width: 560px;
+    max-height: 100%;
+    display: block;
+    padding: 40px 55px;
+    overflow: auto;
+}
+div.login_image img{
+    display: block;
+    /* center */
+    margin-left: auto;
+    margin-right: auto;
+}
+form.login h3{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+div.login_dn{
+    height: 60px;
+    display: flex;
+    position: relative;
+    margin-bottom: 5px;
+}
+div.login_dn input{
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(195, 47, 47);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding-left: 26px;
+    padding-right: 26px;
+    outline: none;
+}
+span.focus_frame{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: calc(100% + 2px);
+    top: -10px;
+    left: -1.5px;
+    pointer-events: none;
+    border-radius: 12px;
+    transition: all 1s;
+}
+input:focus + .focus_frame{
+    border: 1px solid red;
+    opacity: 0;
+    transform: scaleX(1.1) scaleY(1.2);
+}
+div.login_save_forgot{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 30px;
+}
+a.text1{
+    margin-right: auto;
+    text-decoration: none;
+    color: black;
+    font-family: 'SVN-Poppins';
+}
+a.text2{
+    text-decoration: none;
+    color: black;
+    font-family: 'SVN-Poppins';
+}
+a.text1:hover, a.text2:hover{
+    text-decoration: underline;
+    color: coral;
+    transition: 0.3s;
+    padding: 2px;
+}
+button.button-dn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #ff357a, #fff172);
+    cursor: pointer; /*Thay đổi định dạng con trỏ chuột*/ 
+}
+button.button-dn:hover{
+    transition: 0.3s linear;
+    opacity: 0.8;
+}
+button.button-dn:focus + .focus_frame{
+    position: relative;
+
+}
+

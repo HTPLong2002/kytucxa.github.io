@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web quản lý KTX</title>
+    <link rel="stylesheet" href="/css/cssreset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/dangkyphong.css">
+</head>
+<body>
+    <header class="head_web">
+        <div class="logo">
+            <a href="/trang-chu/user/<%= Masv%>" class="home">
+            <i class="fa-solid fa-house"></i>
+            <div class="text">
+                <h3 id="text1">TRANG CHỦ</h3>
+                <h3 id="text2">CỦA SINH VIÊN</h3>
+            </div>
+            </a>
+        </div>
+            <ul class="menu">
+                <li class="dropdown_show">
+                    <a class="item_thongbao it" href="#" title="Thông báo">
+                    <i class="fa-solid fa-bell"></i>
+                    </a>
+                    <ul class="box_tb">
+                        <li>
+                            <a href="/hocweb/qlktx_SV.html">
+                                <h2>Thông báo</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown_show">
+                    <a class="item_mail it" href="#" title="mail">
+                        <i class="fa-sharp fa-solid fa-envelope"></i>
+                    </a>
+                    <ul class="box_tb">
+                        <li>
+                            <a href="/hocweb/qlktx_SV.html">
+                                <h2>Mail</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main_avt">
+                    <div class="block_avt">
+                        <span><%=HoTen%></span>
+                    <a class="user_avt" href="#" title="Thông báo">
+                        <img src="/image/avt.jpg" alt="avt">
+                        <div class="icon_avt">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>                     
+                    </a>
+                    <ul class="information">
+                        <li class="ttsv"><a id="ttsv" href="/trang-chu/user/<%=Masv%>/thong-tin-sinh-vien">Thông tin sinh viên</a></li>
+                        <li class="ttsv"><a href="/">Đăng xuất</a></li>
+                    </ul>
+                    </div>
+                </li>
+            </ul>
+    </header>
+    <aside class="main_sidebar">
+        <ul class="menu_sidebar">
+            <li class="menu1">
+                <a class="menu1_item ip1" href="#">
+                    <i class="app-menu__icon fa fa-edit"></i>
+                    <span>Biểu mẫu</span>
+                    <i class="treeview-indicator fa fa-angle-right"></i>    
+                </a>
+                
+                <ul class="menu_sidebar2">
+                    <li><a href="/trang-chu/user/<%= Masv%>/Thong-tin-dkphong">Đăng ký ở KTX</a></li>
+                    <li><a href="/trang-chu/user/<%=Masv%>/duyet-don-swaproom">Đăng ký chuyển phòng KTX</a></li>
+                    <li><a href="">Đăng ký trả phòng KTX</a></li>
+                    <li><a href="">Đăng ký sửa chữa CSVC</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <main class="main_web">
+        <div class="head_title">
+            <div>
+                <h1>
+                    <i class="fa fa-edit"></i>
+                    Đăng ký phòng
+                </h1>
+                <p>Đơn đăng ký phòng dành cho sinh viên</p>
+            </div>
+        </div>
+        <div class="block_form">
+                <div div class="title">
+                    <h3 class="title-form">Biểu mẫu đăng ký phòng</h3>
+                    <div class="title-body">
+                        <form class="form-dkp">
+                            <h4>Thông tin sinh viên</h4>
+                            <div class="block-sv">
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="MaSV" placeholder=" " value="<%=Masv%>" name="MaSV" readonly>
+                                    <label for="MaSV" class="label">Mã số sinh viên</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="Hoten_sv" placeholder=" " value="<%=HoTen%>" name="Hoten" readonly>
+                                    <label for="Hoten" class="label">Họ và tên</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="ngaysinh" placeholder=" " value="<%=Ngay%>/<%=Thang%>/<%=Nam%>" name="ngaysinh" readonly>
+                                    <label for="ngaysinh" class="label-ns">Ngày sinh</label>
+                                </div>
+                                <div class="id1">
+                                    <label for="gender" class="label-1">Giới tính</label> 
+                                    <div class="form-gioitinh">        
+                                    <label for="Male" class="label-2">            
+                                        <input type="radio" id="Male" name="gioitinh" value="Nam">Nam<br>
+                                    </label> 
+                                    <label for="Female">                          
+                                        <input type="radio" id="Female" name="gioitinh" value="Nữ">Nữ<br>
+                                    </label> 
+                                    </div>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form"  id="SDT" placeholder=" " name="SDT" maxlength="11">
+                                    <label for="SDT" class="label">Số điện thoại</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="email" class="text-form"  id="Email-TDH" placeholder=" " name="Email_TDH">
+                                    <label for="Email-TDH" class="label">Email trường đại học</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="email" class="text-form form-disable"  id="Email-cn" placeholder=" " value="<%=Email%>" name="Email_cn" readonly>
+                                    <label for="Email-cn" class="label">Email cá nhân</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form"  id="Truong" placeholder=" " name="Truong">
+                                    <label for="Truong" class="label">Trường đại học</label>
+                                </div>
+
+                                <div class="id1">
+                                    <input type="text" class="text-form"  id="key" placeholder=" " name="key">
+                                    <label for="key" class="label">Khóa</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form"  id="nganh" placeholder=" " name="Nganh">
+                                    <label for="nganh" class="label">Ngành</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form form-disable"  id="CCCD" placeholder=" " value="<%=CCCD%>" name="CCCD" readonly>
+                                    <label for="CCCD" class="label">Căn cước công dân</label>
+                                </div>
+                                <div class="id1">
+                                    <label for="image-CCCD" class="label-1">Ảnh CCCD Mặt trước</label>
+                                    <br>
+                                    <input type="file" class="text-form"  id="image-CCCD" placeholder=" " name="image_CCCD" multiple>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form"  id="dantoc" placeholder=" " name="dantoc">
+                                    <label for="dantoc" class="label">Dân tộc</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form"  id="diachi" placeholder=" " name="diachi">
+                                    <label for="diachi" class="label">Địa chỉ nhà</label>
+                                </div>           
+                                <!-- <div class="id1">
+                                    <label for="bank" class="label-1">Ngân hàng đang sử dụng</label>
+                                    <br>
+                                    <select name="nganhang" id="bank">
+                                        <option value=""></option>
+                                        <option value="Vietinbank">Vietinbank</option>
+                                        <option value="Vietcombank">Vietcombank</option>
+                                    </select>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form"  id="stk" placeholder=" " name="stk" maxlength="20">
+                                    <label for="stk" class="label">Số tài khoản</label>
+                                </div> -->
+                            </div>
+                            <hr>
+                            <h4>Thông tin người thân</h4>
+                            <div class="block-sv">
+                                <div class="id1">
+                                    <input type="text" class="text-form"  id="Hoten_ntsv" placeholder=" " name="Hoten_ntsv">
+                                    <label for="Hoten_ntsv" class="label">Họ và tên</label>
+                                </div>
+                                <div class="id1">
+                                    <label for="quanhe" class="label-1">Quan hệ</label>
+                                    <br>
+                                    <select name="relationship" id="quanhe">
+                                        <option value=""></option>
+                                        <option value="Cha">Cha</option>
+                                        <option value="Mẹ">Mẹ</option>
+                                        <option value="Anh">Anh</option>
+                                        <option value="Chị">Chị</option>
+                                        <option value="Em">Em</option>
+                                        <option value="Khác">Khác</option>
+                                    </select>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form"  id="sodienthoai" placeholder=" " name="sodienthoai">
+                                    <label for="sodienthoai" class="label">Số điện thoại</label>
+                                </div>
+                                <div class="id1">
+                                    <input type="text" class="text-form"  id="dctt" placeholder=" " name="dctt">
+                                    <label for="dctt" class="label">Địa chỉ thường trú</label>
+                                </div> 
+                            </div>
+                            <hr>
+                            <h4>Đối tượng ưu tiên</h4>
+                            <div class="block-dtut">
+                                <div class="id2">
+                                    <label class="label-2" for="ut1">
+                                        <input type="radio" id="ut1" name="doituonguutien"
+                            value="Ưu tiên 1">
+                                        <b>Ưu tiên 1:</b>
+                                        Bản thân Sinh viên là: Anh hùng lực lượng vũ trang nhân dân, 
+                                        anh hùng lao động, thương binh, bệnh binh, người hưởng chính sách như thương binh, sinh viên khuyết tật;
+                                    </label>
+                                </div>
+                                <div class="id2">
+                                    <label class="label-2" for="ut2">
+                                        <input type="radio" id="ut2" name="doituonguutien"
+                            value="Ưu tiên 2">
+                                        <b>Ưu tiên 2:</b>
+                                        Sinh viên là: Con liệt sỹ, con thương binh, con bệnh binh, 
+                                        con của người hưởng chính sách như thương binh, con của người có công;
+                                    </label>
+                                </div>
+                                <div class="id2">
+                                    <label class="label-2" for="ut3">
+                                        <input type="radio" id="ut3" name="doituonguutien"
+                            value="Ưu tiên 3">
+                                        <b>Ưu tiên 3:</b>
+                                        Sinh viên có hộ khẩu thường trú tại vùng cao, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn;
+                                    </label>
+                                </div>
+                                <div class="id2">
+                                    <label class="label-2" for="ut4">
+                                        <input type="radio" id="ut4" name="doituonguutien"
+                            value="Ưu tiên 4">
+                                        <b>Ưu tiên 4:</b>
+                                        Sinh viên có cha hoặc mẹ là người dân tộc thiểu số;
+                                    </label>
+                                </div>
+                                <div class="id2">
+                                    <label class="label-2" for="ut5">
+                                        <input type="radio" id="ut5" name="doituonguutien"
+                            value="Ưu tiên 5">
+                                        <b>Ưu tiên 5:</b>
+                                        Sinh viên mồ côi cả cha và mẹ;
+                                    </label>
+                                </div>
+                                <div class="id2">
+                                    <label class="label-2" for="ut6">
+                                        <input type="radio" id="ut6" name="doituonguutien"
+                            value="Ưu tiên 6">
+                                        <b>Ưu tiên 6:</b>
+                                        Sinh viên là con hộ nghèo, hộ cận nghèo theo quy định hiện hành của Nhà nước;
+                                    </label>
+                                </div>
+                                <div class="id2">
+                                    <label class="label-2" for="ut7">
+                                        <input type="radio" id="ut7" name="doituonguutien"
+                            value="Ưu tiên 7">
+                                        <b>Ưu tiên 7:</b>
+                                        Sinh viên tích cực tham gia các hoạt động do nhà trường, 
+                                        Đoàn TNCS Hồ Chí Minh, Hội sinh viên, khu nội trú hoặc các tổ chức xã hội tổ chức;
+                                    </label>
+                                </div>
+                                <div class="id2">
+                                    <label class="label-2" for="ut8">
+                                        <input type="radio" id="ut8" name="doituonguutien"
+                            value="Ưu tiên 8">
+                                        <b>Ưu tiên 8:</b>
+                                        Sinh viên các chương trình đào tạo (Chất lượng cao, Cử nhân tài năng);
+                                    </label>
+                                </div>
+                                <div class="id2">
+                                    <label class="label-2" for="ut9">
+                                        <input type="radio" id="ut9" name="doituonguutien" value="Ưu tiên 9">
+                                        <b>Ưu tiên 9:</b>
+                                        Các trường hợp khác.
+                                    </label>
+                                </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <h4>Đăng ký phòng ký túc xá</h4>
+                            <div class="block-sv">
+                                <div class="id1">
+                                    <label for="loaiphong" class="label-1" >Loại Phòng</label>
+                                    <br>
+                                    <select name="loaiphong" id="loaiphong">
+                                        <option value=""></option>
+                                        <option value="Nam">Phòng Nam</option>
+                                        <option value="Nữ">Phòng Nữ</option>
+                                    </select>
+                                </div>
+                                <div class="id1">
+                                    <label for="Maktx" class="label-1">Mã ký túc xá</label>
+                                    <br>
+                                    <select name="Makytucxa" id="Maktx">
+                                        <option value=""></option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                    </select>
+                                </div>
+                                <div class="id1">
+                                    <label for="Maday" class="label-1">Mã dãy</label>
+                                    <br>
+                                    <select name="Maday" id="Maday">
+                                        <option value=""></option>
+                                        <option value="A1">A1</option>
+                                        <option value="A2">A2</option>
+                                        <option value="B1">B1</option>
+                                    </select>
+                                </div>
+                                <div class="id1">
+                                    <label for="Maphong" class="label-1" >Mã phòng</label>
+                                    <br>
+                                    <select name="Maphong" id="Maphong">
+                                        <option value=""></option>
+                                        <option value="A1001">A1001</option>
+                                        <option value="A1002">A1002</option>
+                                        <option value="A2001">A2001</option>
+                                        <option value="A2002">A2002</option>
+                                        <option value="B1001">B1001</option>
+                                        <option value="B1002">B1002</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="title-footer">
+                                <div class="button-dk">
+                                    <button type="submit" class="register">
+                                        <i class="fa fa-fw fa-lg fa-check-circle"></i>
+                                        Đăng ký
+                                    </button>
+                                </div>
+                                <div class="button-out">
+                                    <a href="/trang-chu/user/<%= Masv%>/Thong-tin-dkphong" class="out">
+                                        <i class="fa fa-fw fa-lg fa-times-circle"></i>
+                                        Hủy
+                                    </a>
+                                </div>  
+                            </div>
+                        </form>
+                    </div>                   
+                </div>
+        </div>
+    </main>
+    <footer class="footer_web">
+        <h5>Web phát triển bởi
+            <a href="https://www.facebook.com/profile.php?id=100009414029987">Huỳnh Tấn Phi Long</a>
+        </h5>
+    </footer>
+    <script>
+        let arrow2 = document.querySelectorAll(".user_avt");
+        for (var i = 0; i < arrow2.length; i++) {
+          arrow2[i].addEventListener("click", (e)=>{
+         let arrowParent2 = e.target.parentElement.parentElement;//selecting main parent of arrow
+         arrowParent2.classList.toggle("showMenu");
+          });
+        }
+        let arrow = document.querySelectorAll(".menu1_item");
+        for (var i = 0; i < arrow.length; i++) {
+          arrow[i].addEventListener("click", (e)=>{
+         let arrowParent = e.target.parentElement;//selecting main parent of arrow
+         arrowParent.classList.toggle("showMenu");
+          });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            // let Masv = document.getElementById("Masv").value;
+            let SDT = document.getElementById("SDT").value;
+            let Email_TDH = document.getElementById("Email-TDH").value;
+            let Truong = document.getElementById("Truong").value;
+            let key = document.getElementById("key").value;
+            let nganh = document.getElementById("nganh").value;
+            let dantoc = document.getElementById("dantoc").value;
+            let diachi = document.getElementById("diachi").value;
+            let file = document.getElementById("image-CCCD").value;   
+            let arr_gt = document.getElementsByName("gioitinh");
+            let dem = 0;
+            let Hoten_ntsv = document.getElementById("Hoten_ntsv").value;
+            let sodienthoai = document.getElementById("sodienthoai").value;
+            let dctt = document.getElementById("dctt").value;
+            let quanhe = document.getElementById("quanhe").value;
+            for(let i = 0; i<arr_gt.length; i++){
+                if(arr_gt[i].checked == true){
+                    dem++;
+                }
+            }
+            if(dem==0){return alert("yêu cầu chọn giới tính");}
+            if(SDT==""){alert("Số điện thoại không được bỏ trống");return false;}
+            else{if(SDT.length < 10){alert("Số điện thoại phải ghi đủ 10 hoặc 11 số");return false;}
+                var regex = /^[0-9]\d{9}/
+                if(regex.test(SDT)==false){
+                    alert("Số điện thoại phải nhập bằng số!")
+                    return false;}
+                }
+            if(Email_TDH==""){
+                alert("Email của trường đại học không được bỏ trống");
+                return false;
+            }else{
+                let regex = /^\S+@\S+\.edu+\.vn/;
+                if(regex.test(Email_TDH)==false){
+                    alert("Email không hợp lệ!");
+                    return false;
+                }
+            }
+            if(Truong==""){
+                alert("Yêu cầu ghi trường đang học!");
+                return false;
+            }
+            if(key==""){
+                alert("Yêu cầu ghi khóa!");
+                return false;
+            }
+            if(nganh==""){
+                alert("Yêu cầu ghi ngành đang học!");
+                return false;
+            }
+            if(file<2){
+                alert("ảnh CCCD phải tải lên đầy đủ 2 file");
+                return false;
+            }
+            if(diachi==""){
+                alert("Địa chỉ không được để trống!");
+                return false;
+            }
+            if(Hoten_ntsv==""){
+                alert("Họ tên người thân không được để trống!")
+                return fasle;
+            }
+            if(quanhe==""){
+                alert("Quan hệ không được để trống!");
+                return false;
+            }
+            if(sodienthoai==""){
+                alert("Số điện thoại không được bỏ trống")
+                return fasle;
+            }else{
+                if(sodienthoai.length < 10){
+                    alert("Số điện thoại phải ghi đủ 10 hoặc 11 số")
+                    return false;}
+                var regex = /^[0-9]\d{9}/
+                if(regex.test(sodienthoai)==false){
+                    alert("Số điện thoại phải nhập bằng số!")
+                    return false;}
+                }
+            if(dctt==""){
+                alert("Địa chỉ thường trú không được để trống!")
+                return fasle;
+            }
+            let arr_dtut = document.getElementsByName("doituonguutien");
+            dem=0;
+            for(let i = 0; i<arr_dtut.length; i++){
+                if(arr_dtut[i].checked == true){
+                    dem++;
+                }
+            }
+            if(dem==0){return alert("yêu cầu chọn đối tượng ưu tiên");}
+            const fd = new FormData(form);
+            const urlEncoded = new URLSearchParams(fd).toString();
+            fetch('/trang-chu/user/:Masv/dang-ky-phong',{
+                method: "POST",
+                body: fd,
+            })
+            alert("Gửi đơn đăng ký thành công")
+            return window.location.href = "Thong-tin-dkphong";
+        })
+        
+    </script>
+</body>
+</html>
